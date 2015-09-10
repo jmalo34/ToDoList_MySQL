@@ -51,6 +51,20 @@
             $this->assertEquals([$test_task, $test_task2], $result);
         }
 
+        function test_getID()
+        {
+            //Arrange
+            $description = "Wash the dog";
+            $id = 1;
+            $test_Task = new Task($description, $id);
+
+            //Act
+            $result = $test_Task->getId();
+
+            //Assert
+            $this->assertEquals(1, $result);
+        }
+
         function test_deleteAll()
         {
             //Arrange
